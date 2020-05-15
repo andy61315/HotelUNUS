@@ -1,0 +1,140 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<div  class="container-fluid">
+  <div class="row">
+   	<div id="left" class="col-md-2 col-12 scrollbarStyle" >
+ 		<div id="log" class="col-lg-12"><img src="<%=request.getContextPath()%>/back-end/img/logo/sea.png" alt="hotel Unus logo"></div>
+   		
+			<div id="date" class="col-12"></div>
+  			<nav class="nav flex-column col-lg-10 col-10 offset-1"  id="myNavbar">		
+  				<!-- active fa fa-bed -->
+  					
+  				  	<!-- NAV CONTENT -->
+  					<a class="nav-link" id="OnSiteBookingbtn" href="<%= request.getContextPath() %>/back-end/room/room.do?action=allCheckinBomDisplay">
+  						<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-heart-key-100.png">
+  						CHECKIN
+  					</a>
+  					<a class="nav-link" id="bookRoombtn" href="<%= request.getContextPath() %>/back-end/room/room.do?action=allCheckoutBomDisplay">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-news-100.png">
+	  					CHECKOUT
+  					</a>
+
+  					<a class="nav-link" id="bookRoombtn" href="<%= request.getContextPath() %>/back-end/BookingOrderMaster/listAllBookingOrderMaster.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-money-box-100.png">
+	  					訂房管理
+  					</a>
+					
+
+					<a class="nav-link" id="room-btn" href="<%= request.getContextPath() %>/back-end/saleplan/listAllSal.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-commercial-100.png">
+	  					優惠管理
+  					</a>
+
+					<a class="nav-link" id="room-type-btn" href="<%= request.getContextPath() %>/back-end/roomtype/listAllRoomType.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-room-100.png">
+	  					房型管理
+  					</a>
+					
+					<a class="nav-link" id="room-type-img-btn" href="<%= request.getContextPath() %>/back-end/RoomTypePicture/listRoomTypePictureByRoomType.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-picture-100.png">
+	  					房型圖片管理
+  					</a>
+					
+					<a class="nav-link" id="room-service-btn" href="<%= request.getContextPath() %>/back-end/room/listAllRoom.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-heart-key-100.png" >
+	  					房間管理
+  					</a>
+  					
+  					<a class="nav-link" id="res-order-btn" href="<%= request.getContextPath() %>/back-end/restaurant/listAllRestaurant.jsp">
+  						<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-chair-100.png">
+  						餐廳管理
+  					</a>
+  					
+  					
+  					<a class="nav-link" id="meal-btn" href="<%= request.getContextPath() %>/back-end/meal/listMeal.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-cutlery-100.png">
+	  					餐點管理
+  					</a>
+  					
+  					<a class="nav-link" id="room-meal-btn" href="<%= request.getContextPath() %>/back-end/order/listOrder.jsp">
+  						<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-brief-100.png">
+  						訂餐管理
+  					</a>
+  					
+  					<a class="nav-link" id="cusbtn" href="<%= request.getContextPath() %>/back-end/customer/select_page.jsp">
+  						<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-cute-pumpkin-100.png">
+  						會員管理
+  					</a>
+
+  					<a class="nav-link" id="empbtn" href="<%= request.getContextPath() %>/back-end/empolyee/listEmp.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-thanksgiving-100.png">
+	  					雇員管理
+  					</a>
+					
+  					<a class="nav-link"  id="reportbtn" href="<%= request.getContextPath() %>/back-end/diaryreport/diary_report.jsp">
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-monster-face-100.png">
+	  					檢舉管理
+  					</a>
+
+  					<a class="nav-link" id="lineQAbtn" >
+	  					<img src="<%=request.getContextPath()%>/back-end/img/icon/Favorites/icons8-cute-monster-100.png">
+	  					線上客服
+  					</a>
+
+					<!-- NAV CONTENT -->
+
+				</nav>	
+		
+			<div id="color2" class="col-lg-12"></div>
+  		</div>
+	
+    	<div id="right" class="col-md-10 col-12">
+    			
+<a href="#openLogoutModal">
+    <div class="logout-icon">
+    	
+	</div>
+	</a>
+	<!-- login Modal starts here    ================================================== -->
+<div class="modalDialog" id="openLogoutModal">
+	<c:choose>
+		<c:when test="${not empty sessionScope.emp_id}">
+			<jsp:useBean id="employeeSvc" scope="page" class="com.employee.model.EmployeeService" />
+			${employeeSvc.getOneEmp(sessionScope.emp_id).emp_name}
+			<div class="logout-container">
+				<div class="img-container">
+					<img alt="Avatar" class="logout-avatar" src=
+						"<%=request.getContextPath()%>//GetEmpPicture?emp_id=${sessionScope.emp_id}">
+				</div>
+				<div class="logout-info">
+					<h3>${employeeSvc.getOneEmp(sessionScope.emp_id).emp_name}</h3>
+					<form method="post" action="<%=request.getContextPath()%>/employee/emp.do">	
+						<input type="hidden" name="action" value="empSignOut">
+						<button class="logout" type="submit">Logout</button>
+						<div class="logout-bottom-container">
+						</div><a class="logout-modal-close" href="#close">Cancel</a> 
+					</form>
+				</div>
+			</div>
+		</c:when>
+		<c:otherwise>
+			<div class="logout-container">
+				<div class="img-container">
+					<img alt="Avatar" class="logout-avatar" src=
+						"http://i701.photobucket.com/albums/ww17/suedinym/pens/avatar-f_zps9q1uch04.png">
+				</div>
+				<div class="logout-info">
+					<h3>你是誰？</h3>
+					<button class="logout">
+						<a href="<%= request.getContextPath() %>/back-end/homepage/empSignin.jsp">
+							<b style="color: black;">LogIn</b>
+						</a> 
+					</button>
+					<div class="logout-bottom-container">
+					</div><a class="logout-modal-close" href="#close">Cancel</a> 
+				</div>
+			</div>
+		</c:otherwise>
+	</c:choose>
+</div>	
+    			
+    			

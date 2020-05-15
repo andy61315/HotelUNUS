@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>DA106G1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <context-param>
+	<param-name>org.apache.tomcat.websocket.textBufferSize</param-name>
+	<param-value>5242800</param-value>
+</context-param>
+
+  <servlet>
+  	<servlet-name>MapStatusOnStart</servlet-name>
+	<servlet-class>com.util.MapStatusOnStart</servlet-class>
+	<load-on-startup>10</load-on-startup>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MapStatusOnStart</servlet-name>
+  	<url-pattern>/MapStatusOnStart</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>SocketServlet</servlet-name>
+	<servlet-class>com.socket.SocketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SocketServlet</servlet-name>
+  	<url-pattern>/SocketServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>BookingOrderMaster</servlet-name>
+	<servlet-class>com.bom.controller.BookingOrderMasterServlet</servlet-class>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BookingOrderMaster</servlet-name>
+  	<url-pattern>/BookingOrderMaster/bom.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RoomTypePicture</servlet-name>
+	<servlet-class>com.roomtypepicture.controller.RoomTypePictureServlet</servlet-class>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RoomTypePicture</servlet-name>
+  	<url-pattern>/RoomTypePicture/roomtypepicture.do</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+  	<servlet-name>GetRoomTypePicture</servlet-name><!-- 單獨用來取照片的servlet-->
+	<servlet-class>com.roomtypepicture.controller.GetRoomTypePicture</servlet-class>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetRoomTypePicture</servlet-name>
+  	<url-pattern>/RoomTypePicture/GetRoomTypePicture</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>RoomType</servlet-name>
+	<servlet-class>com.roomtype.controller.RoomTypeServlet</servlet-class>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RoomType</servlet-name>
+  	<url-pattern>/RoomType/roomtype.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>CheckRoomRemain</servlet-name>
+	<servlet-class>com.checkroomremain.controller.CheckRoomRemainServlet</servlet-class>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CheckRoomRemain</servlet-name>
+  	<url-pattern>/front-end/checkroomremain/CheckRoomRemain.do</url-pattern>
+  </servlet-mapping>
+  
+  
+<servlet>
+<servlet-name>BodServlet</servlet-name>
+<servlet-class>com.bod.controller.BookOrderDetailServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>BodServlet</servlet-name>
+<url-pattern>/bod/bod.do</url-pattern>
+</servlet-mapping>
+
+
+ 	<servlet>
+		<servlet-name>RoomServlet</servlet-name>
+		<servlet-class>com.room.controller.RoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomServlet</servlet-name>
+		<url-pattern>/back-end/room/room.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>SalePlanServlet</servlet-name>
+		<servlet-class>com.saleplan.controller.SalePlanServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SalePlanServlet</servlet-name>
+		<url-pattern>/back-end/saleplan/saleplan.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CusNoticeServlet</servlet-name>
+		<servlet-class>com.cusnotice.controller.CusNoticeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CusNoticeServlet</servlet-name>
+		<url-pattern>/back-end/cusnotice/cusnotice.do</url-pattern>
+	</servlet-mapping>
+	
+	
+  
+	<servlet>
+		<servlet-name>NewsServlet</servlet-name>
+		<servlet-class>com.news.controller.NewsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsServlet</servlet-name>
+		<url-pattern>/news/news.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>CusPhotoReader</servlet-name>
+	<servlet-class>com.cus.controller.CusPhotoReader</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CusPhotoReader</servlet-name>
+		<url-pattern>/CusPhotoReader</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>CusServlet</servlet-name>
+		<servlet-class>com.cus.controller.CusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CusServlet</servlet-name>
+		<url-pattern>/back-end/customer/cus.do</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>CusServlet</servlet-name>
+		<url-pattern>/customer/cus.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>ShoppingServlet</servlet-name>
+		<servlet-class>com.shopping.controller.ShoppingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingServlet</servlet-name>
+		<url-pattern>/back-end/resmeal/Shopping.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestaurantServlet_back</servlet-name>
+		<servlet-class>com.restaurant.controller.RestaurantServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestaurantServlet_back</servlet-name>
+		<url-pattern>/back-end/restaurant/rest.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestaurantServlet_front</servlet-name>
+		<servlet-class>com.restaurant.controller.RestaurantServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestaurantServlet_front</servlet-name>
+		<url-pattern>/front-end/restaurant/rest.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResReservationServlet_back</servlet-name>
+		<servlet-class>com.resreservation.controller.ResReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResReservationServlet_back</servlet-name>
+		<url-pattern>/back-end/resreservation/resr.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResReservationServlet_front</servlet-name>
+		<servlet-class>com.resreservation.controller.ResReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResReservationServlet_front</servlet-name>
+		<url-pattern>/front-end/resreservation/resr.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ResMealOrderMasterServlet</servlet-name>
+		<servlet-class>com.resmealom.controller.ResMealOrderMasterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResMealOrderMasterServlet</servlet-name>
+		<url-pattern>/back-end/resmealom/resmom.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>DiaryServlet</servlet-name>
+		<servlet-class>com.diary.controller.DiaryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DiaryServlet</servlet-name>
+		<url-pattern>/diary/diary.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DiaryMessageServlet</servlet-name>
+		<servlet-class>com.diarymessage.controller.DiaryMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DiaryMessageServlet</servlet-name>
+		<url-pattern>/diarymessage/diarymessage.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>DiaryReportServlet</servlet-name>
+		<servlet-class>com.diaryreport.controller.DiaryReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DiaryReportServlet</servlet-name>
+		<url-pattern>/diaryreport/diaryreport.do</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+<servlet-name>EmployeeServletAndroid</servlet-name>
+<servlet-class>android.com.employee.controller.EmployeeServletAndroid</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>EmployeeServletAndroid</servlet-name>
+<url-pattern>/EmployeeServletAndroid</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>RoomServletAndroid</servlet-name>
+<servlet-class>android.com.room.controller.RoomServletAndroid</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>RoomServletAndroid</servlet-name>
+<url-pattern>/RoomServletAndroid</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>RoomMealOrderServletAndroid</servlet-name>
+<servlet-class>android.com.roommealordermaster.controller.RoomMealOrderServletAndroid</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>RoomMealOrderServletAndroid</servlet-name>
+<url-pattern>/RoomMealOrderServletAndroid</url-pattern>
+</servlet-mapping>
+	
+  <filter>
+    <filter-name>loginFilter</filter-name>
+    <filter-class>com.cus.controller.LoginFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/front-end/customer/update_cus_front.jsp</url-pattern>
+    <url-pattern>/front-end/checkroomremain/*</url-pattern>
+    <url-pattern>/front-end/bookingordermaster/*</url-pattern>
+    <url-pattern>/front-end/meal/*</url-pattern>
+    <url-pattern>/front-end/order/*</url-pattern>
+    <url-pattern>/front-end/resreservation/*</url-pattern>
+    <url-pattern>/front-end/diary/addDiary.jsp</url-pattern>
+    <url-pattern>/front-end/diary/listCusDiary.jsp</url-pattern>
+    <url-pattern>/front-end/diary/listMyDiary.jsp</url-pattern>
+    <url-pattern>/front-end/diary/update_diary_input.jsp</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+    <dispatcher>ASYNC</dispatcher>
+  </filter-mapping>	
+  
+  
+  
+  <filter>
+    <filter-name>EmpSignedInFilter</filter-name>
+    <filter-class>com.employee.controller.EmpSignedInFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>EmpSignedInFilter</filter-name>
+    <url-pattern>/back-end/*</url-pattern>
+    
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+    <dispatcher>ASYNC</dispatcher>
+  </filter-mapping>	
+  
+</web-app>

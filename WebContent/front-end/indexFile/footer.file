@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+ <!-- </div>
+            <footer  style="width:98vw;margin:0px auto;">
+                <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> Your Company 
+                    
+                . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Template Mo</a></p>
+            </footer>
+    </div>  .main-content -->
+
+<%@ include file="/front-end/chatroom/chatroomhtml_front_end.file" %>   

@@ -1,0 +1,150 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
+                <div class="tm-main-content" id="top">
+            <div class="tm-top-bar-bg"></div>    
+            <div class="tm-top-bar" id="tm-top-bar">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg narbar-light" >
+                            <a class="navbar-brand mr-auto" href="<%=request.getContextPath()%>/front-end/index.jsp" 
+                            	onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/index.jsp'">
+                                <img src="<%=request.getContextPath()%>/front-end/img/USUN1.png" alt="Site logo">
+                                Hotel UNUS
+                            </a>
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                <ul id="menu" class="navbar-nav " style="margin:auto;">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tm-section-2">房型瀏覽</a>
+                                        <ul>
+									        <li>
+									        	<a href="#">單人房</a>
+									        	<ul>
+									        		<c:forEach var="rtVO" items="${rtList_1}">
+									        			<li>
+									        				<a href="<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}" 
+									        					onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}'">
+									        					${rtVO.room_Type_Name}
+								        					</a>
+							        					</li>
+									        		</c:forEach>
+									        	</ul>
+									        </li>
+									        <li>
+									        	<a href="#">雙人房</a>
+									        	<ul>
+								        			<c:forEach var="rtVO" items="${rtList_2}">
+									        			<li>
+									        				<a href="<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}" 
+									        					onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}'">
+									        					${rtVO.room_Type_Name}
+								        					</a>
+							        					</li>
+									        		</c:forEach>
+									        	</ul>
+									        </li>
+									        <li>
+									        	<a href="#">三人房</a>
+									        	<ul>
+									        		<c:forEach var="rtVO" items="${rtList_3}">
+									        			<li>
+									        				<a href="<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}" 
+									        					onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}'">
+									        					${rtVO.room_Type_Name}
+								        					</a>
+							        					</li>
+									        		</c:forEach>
+									        	</ul>
+									        </li>
+									        <li>
+									        	<a href="#">四人房</a>
+									        	<ul>
+									        		<c:forEach var="rtVO" items="${rtList_4}">
+									        			<li>
+									        				<a href="<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}" 
+									        					onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}'">
+									        					${rtVO.room_Type_Name}
+								        					</a>
+							        					</li>
+									        		</c:forEach>
+									        	</ul>
+									        </li>
+									        <li>
+									        	<a href="#">五人房</a>
+									        	<ul>
+									        		<c:forEach var="rtVO" items="${rtList_5}">
+									        			<li>
+									        				<a href="<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}" 
+									        					onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}'">
+									        					${rtVO.room_Type_Name}
+								        					</a>
+							        					</li>
+									        		</c:forEach>
+									        	</ul>
+									        </li>
+									        <li>
+									        	<a href="#">六人房</a>
+									        	<ul>
+									        		<c:forEach var="rtVO" items="${rtList_6}">
+									        			<li>
+									        				<a href="<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}" 
+									        					onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/roomtype/listOneRoomType.jsp?room_Type_No=${rtVO.room_Type_No}'">
+									        					${rtVO.room_Type_Name}
+								        					</a>
+							        					</li>
+									        		</c:forEach>
+									        	</ul>
+									        </li>
+									      </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                       	<a class="nav-link" href="<%=request.getContextPath()%>/front-end/meal/listAllMeal.jsp" 
+                                       	 onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/meal/listAllMeal.jsp'">餐點瀏覽
+                                       	 </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="<%=request.getContextPath()%>/front-end/restaurant/frontlistAllRestaurant.jsp" 
+                                        onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/restaurant/frontlistAllRestaurant.jsp'">餐廳瀏覽
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="<%=request.getContextPath()%>/front-end/diary/select_page.jsp"
+                                        	onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/diary/select_page.jsp'">旅客日誌
+                                        </a>
+                                    </li>
+                                <c:if test="${not empty sessionScope.customerVO}">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tm-section-5">會員中心</a>
+                                        <ul>
+									        <li><a href="<%=request.getContextPath()%>/front-end/customer/listOneCus.jsp"
+									        		 onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/customer/listOneCus.jsp'">會員資料管理
+									        		 </a></li>
+									        <li><a href="<%=request.getContextPath()%>/front-end/bookingordermaster/listBookingOrder.jsp" 
+									    	    onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/bookingordermaster/listBookingOrder.jsp'">住房訂單管理
+									    	    </a></li>
+									        <li><a href="<%=request.getContextPath()%>/front-end/resreservation/listCusResReservation.jsp" 
+									        	onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/resreservation/listCusResReservation.jsp'">餐廳預約管理
+									        </a></li>
+									        <li><a href="#">日誌管理</a></li>
+								        </ul>
+                                    </li>
+                                </c:if>	
+                                </ul>
+	                                <c:choose>
+	                                	<c:when test="${empty sessionScope.customerVO}">
+				                                <a class="nav-link" onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/homepage/Login.jsp?status=signIn'" ><button  type="button" class="inOutRes btn btn-outline-secondary">登入</button></a>
+				                                <a class="nav-link" onclick="javascript:location.href='<%=request.getContextPath()%>/front-end/homepage/Login.jsp?status=signUp'" ><button type="button" class="inOutRes btn btn-outline-secondary">註冊</button></a>
+		                                </c:when>
+		                                <c:otherwise>
+	                                		<span class="badge badge-pill badge-dark"><b>${customerVO.cus_Name}</b></span>	
+		                                	<a class="nav-link" onclick="javascript:location.href='<%=request.getContextPath()%>/customer/cus.do?action=logout'" ><button type="button" class="inOutRes btn btn-outline-secondary">登出</button></a>
+	                                	</c:otherwise>
+	                                </c:choose>
+                            </div>                            
+                        </nav>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- .tm-top-bar -->

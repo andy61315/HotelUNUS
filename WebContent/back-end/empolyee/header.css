@@ -1,0 +1,129 @@
+/*@media (max-width: 575.99px) { ... }
+@media (min-width: 576px) and (max-width: 767.99px) { ... }
+@media (min-width: 768px) and (max-width: 991.99px) { ... }
+@media (min-width: 992px) and (max-width: 1199.99px) { ... }
+@media (min-width: 1200px) { ... }*/
+	body{
+		font-family:Microsoft JhengHei,Arial Black;
+	}
+	
+	#left{
+		height:100vh;
+		width: -30px;
+		overflow:hidden;
+		padding: 0px;
+		/*padding-top:20px;
+		padding-bottom:20px;*/
+		
+		 /*<a href="https://pngtree.com/free-backgrounds">free background photos from pngtree.com</a>*/
+		/*-webkit-filter: grayscale(50%);
+   		filter: grayscale(50%);*//*background-image:url("icon/Ã¢ÂÂPngtreeÃ¢ÂÂ3d abstract background_981834.png");*/
+   		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-image: linear-gradient(to top left,black,#0F2540,#0F2540,black);	
+		/*background-image: url("backgroung_small_c.jpg");*/
+		/*filter:contrast(-20%);
+    	-webkit-filter:contrast(-20%);*/
+    	
+		}
+	#log img{
+		margin-top:20px;
+		width:100px;
+		margin-left:50%;
+		position:relative;
+		right:50px;
+		background-color: white;
+		border-radius:50%;
+	}
+	#date{
+		margin-top: 20px;
+		height:50px;
+		text-align:center;
+		color:#E2943B;
+		/*top:200px;*/
+		/*font-size:10%;*/
+	}
+	#date h5{
+		top:20px;
+	}
+	.tableStyle h2{
+		font-weight:30%;
+		 background-color:#E2943B;
+		
+	}
+	nav{
+
+		text-align:center;
+		font-size: 15px;
+		position: absolute;
+
+	}
+	nav a{
+		background-color: white;
+		border:1px solid black;
+		color:#0F2540;
+	}
+	nav a:hover{
+		background-color:#E2943B;
+		color: white;
+	}
+	nav a img {
+		width:20px;
+		margin-right:10px;
+	}
+	#right{
+		height:100vh;
+		/*width:0px;*/
+		overflow-x:hidden;
+		overflow-y:auto;
+		text-align: center; 
+		padding:0px;
+		margin: 0px;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		scroll-behavior: smooth;
+		
+		background-image: url("/DA106G1/back-end/img/backgroung_small_c.jpg");
+		filter: contrast(-20%);
+    	-webkit-filter:contrast(-20%);
+    	
+	}
+	
+	#date{
+		font-family:Arial Black;
+		color:#E2943B;
+	}
+	#right section {
+		margin-top:20px;
+		margin-bottom:50px;
+		border:2px solid black;
+		border-radius:5px;
+		height:100%;
+		/*background-color:#0F2540;*/
+		background-color:rgba(0,0,0,0.3);
+	}
+	
+	.title{
+		margin-top:10px;
+		border:1px solid black;
+		background-color: white;
+	}
+	#righttitle~div h2.title{
+		border:1px solid black;
+		background-color:#E2943B;;
+	}
+	.tableStyle table{
+		position:absolute;
+		text-align: center;
+		width:97.5%;
+	}
+	 .tableStyle th{
+	 background-color:#E2943B;
+	  border:1px solid black;
+	 }
+	 .tableStyle td{
+	 border:1px solid black;
+		background-color: white;
+	 }
