@@ -3,6 +3,7 @@ a website for hotel management system, designed during Institute for Information
 
 ## Key Features
 * Booking System
+* ChatRoom for Customer Service 
 * Room Service (for meal order)
 * Reservation for restaurant
 * Meal order in restaurant
@@ -14,10 +15,11 @@ a website for hotel management system, designed during Institute for Information
 * jQuery
 * Ajax
 * JSON
-
+* WebSocket
 #### Back-end
 * Java
 * MVC model
+* WebSocket
 
 #### DataBase
 * Oracle
