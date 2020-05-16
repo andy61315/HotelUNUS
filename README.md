@@ -9,13 +9,13 @@ a website for hotel management system, designed by a seven-people group during I
 * Diary management
 
 ## Languages / Techniques
-#### front-end
+#### Front-end
 * JavaScript 
 * jQuery
 * Ajax
 * JSON
 
-#### back-end
+#### Back-end
 * Java
 * MVC model
 
