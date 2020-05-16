@@ -22,3 +22,14 @@ a website for hotel management system, designed by a seven-people group during I
 ### DataBase
 * Oracle
 * Redis
+
+### Environment / Server
+* Windows 10
+* Tomcat
+
+### Development Tools
+* Eclipse
+* Sqldeveloper
+* Sublime
+* RedisDesktopManager
+
