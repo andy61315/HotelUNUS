@@ -1,7 +1,7 @@
 # HotelUNUS
 a website for hotel management system, designed during Institute for Information Industry(資策會).
 
-## Main Function
+## Key Features
 * Booking System
 * Room Service (for meal order)
 * Reservation for restaurant
@@ -23,11 +23,11 @@ a website for hotel management system, designed during Institute for Information
 * Oracle
 * Redis
 
-#### Environment / Server
+## Environment / Server
 * Windows 10
 * Tomcat
 
-#### Development Tools
+## Development Tools
 * Eclipse
 * Sqldeveloper
 * Sublime
