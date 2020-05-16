@@ -9,25 +9,25 @@ a website for hotel management system, designed by a seven-people group during I
 * Diary management
 
 ## Languages / Techniques
-### front-end
+#### front-end
 * JavaScript 
 * jQuery
 * Ajax
 * JSON
 
-### back-end
+#### back-end
 * Java
 * MVC model
 
-### DataBase
+#### DataBase
 * Oracle
 * Redis
 
-### Environment / Server
+#### Environment / Server
 * Windows 10
 * Tomcat
 
-### Development Tools
+#### Development Tools
 * Eclipse
 * Sqldeveloper
 * Sublime
