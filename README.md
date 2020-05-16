@@ -1,5 +1,5 @@
 # HotelUNUS
-a website for hotel management system, designed by a seven-people group during Institute for Information Industry(資策會).
+a website for hotel management system, designed during Institute for Information Industry(資策會).
 
 ## Main Function
 * Booking System
